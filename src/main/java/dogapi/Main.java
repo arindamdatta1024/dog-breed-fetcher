@@ -24,7 +24,6 @@ public class Main {
      * returned by the fetcher
      */
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
-        // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
         if (breedFetcher instanceof CachingBreedFetcher) {
             if (((CachingBreedFetcher) breedFetcher).cache.containsKey(breed)) {
                 return ((CachingBreedFetcher) breedFetcher).cache.get(breed).size();
@@ -34,7 +33,6 @@ public class Main {
             List<String> breeds = dogApiBreedFetcher.getSubBreeds(breed);
             return breeds.size();
         }
-        // return statement included so that the starter code can compile and run.
         return 0;
     }
 }
